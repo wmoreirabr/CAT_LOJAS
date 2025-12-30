@@ -101,7 +101,7 @@ const App: React.FC = () => {
                     border: '1px solid rgba(0,0,0,0.05)'
                   }}
                 >
-                  <img src={slide.url} className="w-full h-full object-contain bg-white" alt="Peça da Coleção" />
+                  <img src={slide.url} className="w-full h-full object-contain bg-white" alt="Peça da Coleção" loading="lazy" />
                 </div>
               );
             })}
@@ -133,27 +133,26 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      {/* Updated Footer for GitHub */}
-      <footer className="w-full py-8 mt-auto border-t border-black/5">
-        <div className="flex flex-col justify-center items-center space-y-4">
-          <p className="text-[10px] uppercase tracking-[0.5em] text-black font-bold">INFORMAÇÕES NO WHATSAPP</p>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-[9px] uppercase tracking-[0.4em] text-black hover:opacity-60 transition-opacity font-bold">
-            PROJETO DISPONÍVEL NO GITHUB
-          </a>
+      {/* Footer Minimalista */}
+      <footer className="w-full py-12 mt-auto border-t border-black/5 bg-white">
+        <div className="flex flex-col justify-center items-center space-y-2 px-4 text-center">
+          <p className="text-[10px] uppercase tracking-[0.6em] text-black font-bold">Informações no WhatsApp</p>
+          <div className="w-8 h-[1px] bg-black/10 my-2"></div>
+          <p className="text-[8px] uppercase tracking-[0.3em] text-black/40">© Joanna Fashion Boutique</p>
         </div>
       </footer>
 
       {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-12 right-12 z-[100]">
+      <div className="fixed bottom-8 right-8 md:bottom-12 md:right-12 z-[100]">
         <button 
           onClick={handleWhatsAppClick}
-          className="relative p-8 bg-black text-white rounded-full shadow-2xl transition-all transform hover:scale-110 active:scale-95 group"
-          aria-label="WhatsApp Joanna Fashion"
+          className="relative p-6 md:p-8 bg-black text-white rounded-full shadow-2xl transition-all transform hover:scale-110 active:scale-95 group"
+          aria-label="WhatsApp"
         >
           <div className="wp-glow-effect"></div>
           <MessageSquare size={24} strokeWidth={2} />
-          <span className="absolute right-full mr-10 bg-black text-white px-10 py-5 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap hidden lg:block tracking-[0.5em] uppercase border border-white/10 shadow-2xl translate-x-4 group-hover:translate-x-0 pointer-events-none">
-            INFORMAÇÕES NO WHATSAPP
+          <span className="absolute right-full mr-10 bg-black text-white px-8 py-4 text-[9px] font-bold opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap hidden lg:block tracking-[0.4em] uppercase border border-white/10 shadow-2xl translate-x-4 group-hover:translate-x-0 pointer-events-none">
+            Fale Conosco
           </span>
         </button>
       </div>
