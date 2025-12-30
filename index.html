@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joanna Fashion — Editorial</title>
+    <title>Joanna Fashion — Editorial Boutique</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,16 +19,15 @@
             -webkit-font-smoothing: antialiased;
         }
         .serif { font-family: 'Playfair Display', serif; }
-        .slider-perspective { perspective: 2000px; }
+        .slider-perspective { perspective: 1500px; }
         .slide-card-3d {
-            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-            transform-style: preserve-3d;
+            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
         }
         .wp-glow-effect {
             position: absolute;
-            inset: -10px;
-            background: rgba(0,0,0,0.05);
-            filter: blur(20px);
+            inset: -8px;
+            background: rgba(0,0,0,0.1);
+            filter: blur(15px);
             border-radius: 9999px;
             opacity: 0;
             transition: opacity 0.3s;
@@ -37,12 +36,6 @@
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: #fff; }
         ::-webkit-scrollbar-thumb { background: #000; }
-        
-        @media (max-width: 380px) {
-            .slide-card-3d {
-                width: 240px !important;
-            }
-        }
     </style>
     <script type="importmap">
 {
