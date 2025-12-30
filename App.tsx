@@ -69,7 +69,6 @@ const App: React.FC = () => {
       {/* Main Content */}
       <main className="flex-grow flex flex-col items-center justify-start py-8 px-4 overflow-hidden relative">
         
-        {/* Título da Seção (COLEÇÃO) */}
         <div className="mb-8 md:mb-12 text-center">
           <h2 className="serif text-4xl md:text-6xl font-normal text-black italic tracking-widest uppercase">
             Coleção
@@ -78,7 +77,6 @@ const App: React.FC = () => {
         </div>
 
         <div className="w-full relative flex flex-col items-center">
-          {/* Slider Perspective Area */}
           <div className="slider-perspective w-full h-[60vh] md:h-[75vh] flex items-center justify-center relative">
             {REPOSITORY_IMAGES.map((slide, index) => {
               const isActive = index === currentIndex;
@@ -106,7 +104,6 @@ const App: React.FC = () => {
               );
             })}
 
-            {/* Side Arrows */}
             <button onClick={prevSlide} className="absolute left-2 md:left-20 top-1/2 -translate-y-1/2 z-50 text-black hover:opacity-50 transition-all transform active:scale-90" aria-label="Anterior">
               <ChevronLeft size={70} strokeWidth={0.5} />
             </button>
@@ -115,7 +112,6 @@ const App: React.FC = () => {
             </button>
           </div>
 
-          {/* Indicators and Counter */}
           <div className="flex flex-col items-center mt-12 space-y-6">
             <span className="text-[10px] font-bold text-black tracking-[0.6em] uppercase">
               {String(currentIndex + 1).padStart(2, '0')} — {String(REPOSITORY_IMAGES.length).padStart(2, '0')}
@@ -133,7 +129,7 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      {/* Footer com link original da agência */}
+      {/* Footer Original ag.arautus.com.br */}
       <footer className="w-full py-12 mt-auto border-t border-black/5 bg-white">
         <div className="flex flex-col justify-center items-center space-y-4 px-4 text-center">
           <p className="text-[10px] uppercase tracking-[0.6em] text-black font-bold">Informações no WhatsApp</p>
@@ -144,7 +140,6 @@ const App: React.FC = () => {
         </div>
       </footer>
 
-      {/* Floating WhatsApp Button */}
       <div className="fixed bottom-8 right-8 md:bottom-12 md:right-12 z-[100]">
         <button 
           onClick={handleWhatsAppClick}
