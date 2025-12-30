@@ -133,12 +133,14 @@ const App: React.FC = () => {
         </div>
       </main>
 
-      {/* Footer Minimalista */}
+      {/* Footer com link original da agência */}
       <footer className="w-full py-12 mt-auto border-t border-black/5 bg-white">
-        <div className="flex flex-col justify-center items-center space-y-2 px-4 text-center">
+        <div className="flex flex-col justify-center items-center space-y-4 px-4 text-center">
           <p className="text-[10px] uppercase tracking-[0.6em] text-black font-bold">Informações no WhatsApp</p>
-          <div className="w-8 h-[1px] bg-black/10 my-2"></div>
-          <p className="text-[8px] uppercase tracking-[0.3em] text-black/40">© Joanna Fashion Boutique</p>
+          <a href="https://ag.arautus.com.br" target="_blank" rel="noopener noreferrer" className="text-[9px] uppercase tracking-[0.4em] text-black hover:opacity-60 transition-opacity font-bold">
+            site feito por ag.arautus.com.br
+          </a>
+          <p className="text-[8px] uppercase tracking-[0.3em] text-black/30">© Joanna Fashion Boutique</p>
         </div>
       </footer>
 
